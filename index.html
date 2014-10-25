@@ -1,0 +1,223 @@
+<!--
+    author Tony Beltramelli
+    http://www.tonybeltramelli.com
+    
+    IT University of Copenhagen
+    http://itu.dk/
+    
+    Software and Systems research group
+    https://sss.wikit.itu.dk/
+  -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BUGDB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="assets/css/common.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <script src="assets/js/libs/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+  </head>
+  <body>
+    <div id="header" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    <span class="sr-only">Toggle navigation</span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	  </button>
+	  <a class="navbar-brand" style="color:white;" href="#home"><strong>BUGDB</strong> by IC/UFAL</a>
+	</div>
+	<div class="navbar-collapse collapse">
+	  <ul class="nav navbar-nav">
+	    <li class="active">
+	      <a href="#search">Bug Database</a>
+	    </li>
+	  </ul>
+	  <div class="navbar-form navbar-right" style="color:white">
+	    Search by <a href="http://vbdb.itu.dk">http://vbdb.itu.dk</a>
+	  </div>
+	</div>
+      </div>
+    </div>
+
+    <div id="content">
+      <div>
+	<div class="container-fluid">
+	  <div id="search_list" class="main">
+	    <a id="bufferoverflow" class="list-group-item disabled">buffer overflow</a>	    
+	    <a href="#bug/f3d83e2" class="list-group-item">Insufficient buffer length leads to buffer overflow</a>
+	    <a href="#bug/8c82962" class="list-group-item">Wrong length units lead to buffer overflow and cause kernel panic</a>
+	    <a href="#bug/60e233a" class="list-group-item">Failing to preserve invariant causes buffer overflow</a>
+	    
+	    <a id="deadcode" class="list-group-item disabled">dead code</a>	    
+	    <a href="#bug/809e660" class="list-group-item">Do_sect_fault defined but not used if ARM_LPAE is enabled</a>
+
+	    <a id="doublelock" class="list-group-item disabled">double acquiring lock</a>
+	    <a href="#bug/d7e9711" class="list-group-item">Double lock when debugging diskquota</a>
+
+	    <a id="fatalassertionviolation" class="list-group-item disabled">assertion violation</a>
+	    <a href="#bug/d549f55" class="list-group-item">Attempt to call a VLAN-related function with VLAN support disabled</a>
+	    <a href="#bug/ae249b5" class="list-group-item">Assertion violation when walking through system memory</a>
+	    <a href="#bug/63878ac" class="list-group-item">Function pointer left uninitialized when power management is disabled</a>
+	    <a href="#bug/657e964" class="list-group-item">Unexpected decrement of the preemption counter</a>
+	    <a href="#bug/0988c4c" class="list-group-item">Fail to process a VLAN packet without VLAN support</a>
+
+	    <a id="incompatibletype" class="list-group-item disabled">incompatible types</a>
+	    <a href="#bug/e1fbd92" class="list-group-item">Argument type incompatible with `printk' format string</a>
+	    <a href="#bug/d6c7e11" class="list-group-item">Mockup implementation expects incompatible pointer type</a>
+
+	    <a id="indexoutofbounds" class="list-group-item disabled">IndexOutOfBounds</a>
+	    <a href="#bug/c708c57" class="list-group-item">Memory access beyond buffer limits</a>
+
+	    <a id="memoryleak" class="list-group-item disabled">fail to release memory before removing last reference to it</a>
+	    <a href="#bug/218ad12" class="list-group-item">Pointer is set to NULL without freeing previously allocated memory</a>
+
+	    <a id="notenoughmemory" class="list-group-item disabled">cannot allocate memory because there is not enough available</a>
+	    <a href="#bug/0dc77b6" class="list-group-item">Module loading fails due to attempt to double-register compat class</a>
+	    <a href="#bug/1f758a4" class="list-group-item">Network interface will fail to go up when !ZONE_DMA</a>
+
+	    <a id="nulldereference" class="list-group-item disabled">null pointer dereference</a>
+	    <a href="#bug/6252547" class="list-group-item">NULL pointer on !OF_IRQ gets dereferenced if IRQ_DOMAIN</a>
+	    <a href="#bug/f7ab9b4" class="list-group-item">NULL function pointer dereferenced if SHMEM is enabled but not TMPFS</a>
+	    <a href="#bug/ee3f34e" class="list-group-item">Debugging code may derefence a NULL pointer</a>
+	    <a href="#bug/76baeeb" class="list-group-item">NULL pointer deference due to invalid cast in x86 NUMA</a>
+	    
+	    <a id="numerictruncation" class="list-group-item disabled">numeric truncation</a>
+	    <a href="#bug/51fd36f" class="list-group-item">Truncation error when converting unsigned long long to long</a>
+
+	    <a id="outofboundsread" class="list-group-item disabled">read out of the intended bounds</a>
+	    <a href="#bug/0f8f809" class="list-group-item">Array is accessed out of its bounds in some configurations</a>
+	    <a href="#bug/91ea820" class="list-group-item">Function incorrectly returning (int)255 on failure causes kernel panic</a>
+
+	    <a id="sysfsapiviolation" class="list-group-item disabled">SysFS API violation</a>
+	    <a href="#bug/472a474" class="list-group-item">Kernel panic due to double enable_IR_x2apic() call on non-SMP boards</a>
+	    
+	    <a id="undeclaredidentifier" class="list-group-item disabled">undeclared identifier</a>
+	    <a href="#bug/f48ec1d" class="list-group-item">Undefined reference to macro when !BLK_CGROUP</a>
+
+	    <a id="undefinedsymbol" class="list-group-item disabled">undefined symbol reference</a>
+	    <a href="#bug/7c6048b" class="list-group-item">Selecting ACPI_VIDEO but not its dependencies causes a build error</a>
+	    <a href="#bug/6651791" class="list-group-item">Undefined reference due to missing dependency on I2C</a>
+	    <a href="#bug/6515e48" class="list-group-item">Undefined references to OMAP2420 functions</a>
+	    <a href="#bug/2f02c15" class="list-group-item">Build error due to missing dependency of BCM47XXX on EXTIF</a>
+	    <a href="#bug/242f1a3" class="list-group-item">Undefined reference to cryptographic function</a>
+
+	    <a id="uninitializedvariable" class="list-group-item disabled">use of variable before initialization</a>
+	    <a href="#bug/30e0532" class="list-group-item">Use of variable before initialization when !SECURITY</a>
+	    <a href="#bug/7acf6cd" class="list-group-item">Dereferencing uninitialized pointer causes Kernel crash</a>
+	    <a href="#bug/1c17e4d" class="list-group-item">An uninitialized string may be displayed if !CONFIG_RCU_FAST_NO_HZ.</a>
+	    <a href="#bug/e39363a" class="list-group-item">Netpoll_setup() returns an uninitialized value (error code)</a>
+	    <a href="#bug/bc8cec0" class="list-group-item">Non-initialized buffer causes kernel panic in JFFS2</a>
+
+	    <a id="unusedvariable" class="list-group-item disabled">unused variable</a>
+	    <a href="#bug/36855dc" class="list-group-item">Unused variable when BF60x is enabled</a>
+
+	    <a id="useafterfree" class="list-group-item disabled">attempt to use a resource after having freed it</a>
+	    <a href="#bug/6e2b757" class="list-group-item">Module_core is referenced after being freed during error cleanup</a>
+
+	    <a id="voidpointerdereference" class="list-group-item disabled">warning: dereferencing `void *' pointer</a>
+	    <a href="#bug/d530db0" class="list-group-item">Disabling PCI support implies that a void* pointer will be dereferenced</a>
+
+	    <a id="weakassertionviolation" class="list-group-item disabled">assertion violation</a>
+	    <a href="#bug/208d898" class="list-group-item">Local_bh_enable() is called with interrupts disabled when HIGHMEM</a>
+	    <a href="#bug/eb91f1d" class="list-group-item">Warning due to a call to kmalloc() with flags __GFP_WAIT and interrupts enabled</a>
+
+	    <a id="writeonreadonly" class="list-group-item disabled">attempt to write on read-only resource</a>
+	    <a href="#bug/221ac32" class="list-group-item">Attempt to set a breakpoint resulted in kernel panic</a>
+	    
+	    <a id="wrongfunargnum" class="list-group-item disabled">wrong number of arguments in function application</a>
+	    <a href="#bug/e67bc51" class="list-group-item">Null stub missing parameter when !TRACING</a>
+	  </div>
+	  <div id="info" class="main hide">
+	    <h3>Not result found.</h3>
+	  </div>
+	</div>
+      </div>
+    </div>
+
+    <div style="display: none;" id="bar" class="progress">
+      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">Loading in progress 100%</div>
+    </div>
+
+    <script src="assets/js/libs/jquery-1.7.1.min.js"></script>
+    <script src="assets/js/libs/underscore-min.js"></script>
+    <script src="assets/js/libs/backbone-min.js"></script>
+    <script src="assets/js/libs/jquery.syntaxhighlighter.min.js"></script>
+    <script src="assets/js/libs/js-yaml.min.js"></script>
+    <script src="assets/js/libs/jquery.infinitescroll.min.js"></script>
+    <script src="assets/js/libs/recaptcha_ajax.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- custom code -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/model/Store.js"></script>
+    <script src="assets/js/model/DataProvider.js"></script>
+    <script src="assets/js/model/BugLoader.js"></script>
+    <script src="assets/js/model/NewsLoader.js"></script>
+    <script src="assets/js/utils/Utils.js"></script>
+    <script src="assets/js/utils/TwoDimensionsDictionary.js"></script>
+    <script src="assets/js/controller/BugDisplayer.js"></script>
+    <script src="assets/js/controller/BugController.js"></script>
+    <script src="assets/js/view/AView.js"></script>
+    <script src="assets/js/view/BugView.js"></script>
+    <script src="assets/js/view/HomeView.js"></script>
+    <script src="assets/js/view/SearchView.js"></script>
+    <script src="assets/js/view/ContributionView.js"></script>
+
+    <script type="text/template" id="comment_block">
+      <div class="panel panel-default">
+	<div class="panel-heading">
+	  <%= author %> <%= date %>
+	</div>
+	<div class="panel-body">
+	  <%= content %>
+	</div>
+      </div>
+    </script>
+
+    <script type="text/template" id="comment_tab">
+      <div>
+	<ul class="nav nav-pills pull-right">
+	  <li class="active">
+	    <a href="#comments_modal" data-toggle="modal">Write comment</a>
+	  </li>
+	</ul>
+	<p>You can contribute to this project by writing a comment for this bug.<span class="hide"> No comments have been submitted for this bug yet.</span></p>
+      </div>
+      <section></section>
+    </script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-33454433-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>
