@@ -1,223 +1,861 @@
-<!--
-    author Tony Beltramelli
-    http://www.tonybeltramelli.com
-    
-    IT University of Copenhagen
-    http://itu.dk/
-    
-    Software and Systems research group
-    https://sss.wikit.itu.dk/
-  -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BUGDB</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
 
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="assets/css/common.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-    <script src="assets/js/libs/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <div id="header" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-	<div class="navbar-header">
-	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-	    <span class="sr-only">Toggle navigation</span>
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	  </button>
-	  <a class="navbar-brand" style="color:white;" href="#home"><strong>BUGDB</strong> by IC/UFAL</a>
-	</div>
-	<div class="navbar-collapse collapse">
-	  <ul class="nav navbar-nav">
-	    <li class="active">
-	      <a href="#search">Bug Database</a>
-	    </li>
-	  </ul>
+     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">BUGDB</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Bug Database</a></li>
+          </ul>
 	  <div class="navbar-form navbar-right" style="color:white">
-	    Search by <a href="http://vbdb.itu.dk">http://vbdb.itu.dk</a>
+	    Research by <a href="http://vbdb.itu.dk">http://vbdb.itu.dk</a>
 	  </div>
-	</div>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
 
-    <div id="content">
-      <div>
-	<div class="container-fluid">
+     <div class="jumbotron">
+       <div class="container">
+         <h4>This survey was conducted by <a href="mailto:d4n1@member.fsf.org">Daniel Pimentel</a> and <a href="mailto:marcos.182p@gmail.com">Marcos Paulo</a> in <a href="http://www.ufal.edu.br/unidadeacademica/ic">IC (Computer's Institute) - UFAL</a> based on 42 bugs found in Kernel Linux.</h4>
+       </div>
+     </div>
+
+    <div class="container">
+      <div class="row">
+	<div class="col-md-12">
 	  <div id="search_list" class="main">
-	    <a id="bufferoverflow" class="list-group-item disabled">buffer overflow</a>	    
-	    <a href="#bug/f3d83e2" class="list-group-item">Insufficient buffer length leads to buffer overflow</a>
-	    <a href="#bug/8c82962" class="list-group-item">Wrong length units lead to buffer overflow and cause kernel panic</a>
-	    <a href="#bug/60e233a" class="list-group-item">Failing to preserve invariant causes buffer overflow</a>
-	    
-	    <a id="deadcode" class="list-group-item disabled">dead code</a>	    
-	    <a href="#bug/809e660" class="list-group-item">Do_sect_fault defined but not used if ARM_LPAE is enabled</a>
+	    <div class="panel-group" id="accordion">
+	      <a id="bufferoverflow" class="list-group-item active">buffer overflow</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug1">
+		      Insufficient buffer length leads to buffer overflow
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug1" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug2">
+		      Wrong length units lead to buffer overflow and cause kernel panic
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug2" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug3">
+		      Failing to preserve invariant causes buffer overflow
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug3" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
 
-	    <a id="doublelock" class="list-group-item disabled">double acquiring lock</a>
-	    <a href="#bug/d7e9711" class="list-group-item">Double lock when debugging diskquota</a>
+	      <a id="deadcode" class="list-group-item active">dead code</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug4">
+		      Do_sect_fault defined but not used if ARM_LPAE is enabled
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug4" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      
+	      <a id="deadcode" class="list-group-item active">double acquiring lock</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug5">
+		      Double lock when debugging diskquota
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug5" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      
+	      <a id="deadcode" class="list-group-item active">assertion violation</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug6">
+		      Attempt to call a VLAN-related function with VLAN support disabled
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug6" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug7">
+		      Assertion violation when walking through system memory
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug7" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug8">
+		      Function pointer left uninitialized when power management is disabled
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug8" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug9">
+		      Unexpected decrement of the preemption counter
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug9" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug10">
+		      Fail to process a VLAN packet without VLAN support
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug10" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      
+	      <a id="deadcode" class="list-group-item active">incompatible types</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug11">
+		      Argument type incompatible with `printk' format string
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug11" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug12">
+		      Mockup implementation expects incompatible pointer type
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug12" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      
+	      <a id="deadcode" class="list-group-item active">IndexOutOfBounds</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug13">
+		      Memory access beyond buffer limits
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug13" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      
+	      <a id="deadcode" class="list-group-item active">fail to release memory before removing last reference to it</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug14">
+		      Pointer is set to NULL without freeing previously allocated memory
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug14" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      
+	      <a id="deadcode" class="list-group-item active">cannot allocate memory because there is not enough available</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug15">
+		      Module loading fails due to attempt to double-register compat class
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug15" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug16">
+		      Network interface will fail to go up when !ZONE_DMA
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug16" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      
+	      <a id="deadcode" class="list-group-item active">null pointer dereference</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug17">
+		      NULL pointer on !OF_IRQ gets dereferenced if IRQ_DOMAIN
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug17" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug18">
+		      NULL function pointer dereferenced if SHMEM is enabled but not TMPFS
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug18" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug19">
+		      Debugging code may derefence a NULL pointer
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug19" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug20">
+		      NULL pointer deference due to invalid cast in x86 NUMA
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug20" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
 
-	    <a id="fatalassertionviolation" class="list-group-item disabled">assertion violation</a>
-	    <a href="#bug/d549f55" class="list-group-item">Attempt to call a VLAN-related function with VLAN support disabled</a>
-	    <a href="#bug/ae249b5" class="list-group-item">Assertion violation when walking through system memory</a>
-	    <a href="#bug/63878ac" class="list-group-item">Function pointer left uninitialized when power management is disabled</a>
-	    <a href="#bug/657e964" class="list-group-item">Unexpected decrement of the preemption counter</a>
-	    <a href="#bug/0988c4c" class="list-group-item">Fail to process a VLAN packet without VLAN support</a>
+	      <a id="deadcode" class="list-group-item active">numeric truncation</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug21">
+		      Truncation error when converting unsigned long long to long
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug21" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
 
-	    <a id="incompatibletype" class="list-group-item disabled">incompatible types</a>
-	    <a href="#bug/e1fbd92" class="list-group-item">Argument type incompatible with `printk' format string</a>
-	    <a href="#bug/d6c7e11" class="list-group-item">Mockup implementation expects incompatible pointer type</a>
+	      <a id="deadcode" class="list-group-item active">read out of the intended bounds</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug22">
+		      Array is accessed out of its bounds in some configurations
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug22" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug23">
+		      Function incorrectly returning (int)255 on failure causes kernel panic
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug23" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
 
-	    <a id="indexoutofbounds" class="list-group-item disabled">IndexOutOfBounds</a>
-	    <a href="#bug/c708c57" class="list-group-item">Memory access beyond buffer limits</a>
+	      <a id="deadcode" class="list-group-item active">SysFS API violation</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug24">
+		      Kernel panic due to double enable_IR_x2apic() call on non-SMP boards
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug24" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
 
-	    <a id="memoryleak" class="list-group-item disabled">fail to release memory before removing last reference to it</a>
-	    <a href="#bug/218ad12" class="list-group-item">Pointer is set to NULL without freeing previously allocated memory</a>
+	      <a id="deadcode" class="list-group-item active">undeclared identifier</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug25">
+		      Undefined reference to macro when !BLK_CGROUP
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug25" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
 
-	    <a id="notenoughmemory" class="list-group-item disabled">cannot allocate memory because there is not enough available</a>
-	    <a href="#bug/0dc77b6" class="list-group-item">Module loading fails due to attempt to double-register compat class</a>
-	    <a href="#bug/1f758a4" class="list-group-item">Network interface will fail to go up when !ZONE_DMA</a>
+	      <a id="deadcode" class="list-group-item active">undefined symbol reference</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug26">
+		      Selecting ACPI_VIDEO but not its dependencies causes a build error
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug26" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug27">
+		      Undefined reference due to missing dependency on I2C
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug27" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug28">
+		      Undefined references to OMAP2420 functions
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug28" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug29">
+		      Build error due to missing dependency of BCM47XXX on EXTIF
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug29" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug30">
+		      Undefined reference to cryptographic function
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug30" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
 
-	    <a id="nulldereference" class="list-group-item disabled">null pointer dereference</a>
-	    <a href="#bug/6252547" class="list-group-item">NULL pointer on !OF_IRQ gets dereferenced if IRQ_DOMAIN</a>
-	    <a href="#bug/f7ab9b4" class="list-group-item">NULL function pointer dereferenced if SHMEM is enabled but not TMPFS</a>
-	    <a href="#bug/ee3f34e" class="list-group-item">Debugging code may derefence a NULL pointer</a>
-	    <a href="#bug/76baeeb" class="list-group-item">NULL pointer deference due to invalid cast in x86 NUMA</a>
-	    
-	    <a id="numerictruncation" class="list-group-item disabled">numeric truncation</a>
-	    <a href="#bug/51fd36f" class="list-group-item">Truncation error when converting unsigned long long to long</a>
+	      <a id="deadcode" class="list-group-item active">use of variable before initialization</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug31">
+		      Use of variable before initialization when !SECURITY
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug31" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug32">
+		      Dereferencing uninitialized pointer causes Kernel crash
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug32" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug33">
+		      An uninitialized string may be displayed if !CONFIG_RCU_FAST_NO_HZ.
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug33" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug34">
+		      Netpoll_setup() returns an uninitialized value (error code)
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug34" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug35">
+		      Non-initialized buffer causes kernel panic in JFFS2
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug35" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
 
-	    <a id="outofboundsread" class="list-group-item disabled">read out of the intended bounds</a>
-	    <a href="#bug/0f8f809" class="list-group-item">Array is accessed out of its bounds in some configurations</a>
-	    <a href="#bug/91ea820" class="list-group-item">Function incorrectly returning (int)255 on failure causes kernel panic</a>
+	      <a id="deadcode" class="list-group-item active">unused variable</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug36">
+		      Unused variable when BF60x is enabled
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug36" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
 
-	    <a id="sysfsapiviolation" class="list-group-item disabled">SysFS API violation</a>
-	    <a href="#bug/472a474" class="list-group-item">Kernel panic due to double enable_IR_x2apic() call on non-SMP boards</a>
-	    
-	    <a id="undeclaredidentifier" class="list-group-item disabled">undeclared identifier</a>
-	    <a href="#bug/f48ec1d" class="list-group-item">Undefined reference to macro when !BLK_CGROUP</a>
+	      <a id="deadcode" class="list-group-item active">attempt to use a resource after having freed it</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug37">
+		      Module_core is referenced after being freed during error cleanup
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug37" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
 
-	    <a id="undefinedsymbol" class="list-group-item disabled">undefined symbol reference</a>
-	    <a href="#bug/7c6048b" class="list-group-item">Selecting ACPI_VIDEO but not its dependencies causes a build error</a>
-	    <a href="#bug/6651791" class="list-group-item">Undefined reference due to missing dependency on I2C</a>
-	    <a href="#bug/6515e48" class="list-group-item">Undefined references to OMAP2420 functions</a>
-	    <a href="#bug/2f02c15" class="list-group-item">Build error due to missing dependency of BCM47XXX on EXTIF</a>
-	    <a href="#bug/242f1a3" class="list-group-item">Undefined reference to cryptographic function</a>
+	      <a id="deadcode" class="list-group-item active">warning: dereferencing `void *' pointer</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug38">
+		      Disabling PCI support implies that a void* pointer will be dereferenced
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug38" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
 
-	    <a id="uninitializedvariable" class="list-group-item disabled">use of variable before initialization</a>
-	    <a href="#bug/30e0532" class="list-group-item">Use of variable before initialization when !SECURITY</a>
-	    <a href="#bug/7acf6cd" class="list-group-item">Dereferencing uninitialized pointer causes Kernel crash</a>
-	    <a href="#bug/1c17e4d" class="list-group-item">An uninitialized string may be displayed if !CONFIG_RCU_FAST_NO_HZ.</a>
-	    <a href="#bug/e39363a" class="list-group-item">Netpoll_setup() returns an uninitialized value (error code)</a>
-	    <a href="#bug/bc8cec0" class="list-group-item">Non-initialized buffer causes kernel panic in JFFS2</a>
+	      <a id="deadcode" class="list-group-item active">assertion violation</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug39">
+		      Local_bh_enable() is called with interrupts disabled when HIGHMEM
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug39" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug40">
+		       Warning due to a call to kmalloc() with flags __GFP_WAIT and interrupts enabled
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug40" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
 
-	    <a id="unusedvariable" class="list-group-item disabled">unused variable</a>
-	    <a href="#bug/36855dc" class="list-group-item">Unused variable when BF60x is enabled</a>
+	      <a id="deadcode" class="list-group-item active">attempt to write on read-only resource</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug41">
+		      Attempt to set a breakpoint resulted in kernel panic
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug41" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
 
-	    <a id="useafterfree" class="list-group-item disabled">attempt to use a resource after having freed it</a>
-	    <a href="#bug/6e2b757" class="list-group-item">Module_core is referenced after being freed during error cleanup</a>
-
-	    <a id="voidpointerdereference" class="list-group-item disabled">warning: dereferencing `void *' pointer</a>
-	    <a href="#bug/d530db0" class="list-group-item">Disabling PCI support implies that a void* pointer will be dereferenced</a>
-
-	    <a id="weakassertionviolation" class="list-group-item disabled">assertion violation</a>
-	    <a href="#bug/208d898" class="list-group-item">Local_bh_enable() is called with interrupts disabled when HIGHMEM</a>
-	    <a href="#bug/eb91f1d" class="list-group-item">Warning due to a call to kmalloc() with flags __GFP_WAIT and interrupts enabled</a>
-
-	    <a id="writeonreadonly" class="list-group-item disabled">attempt to write on read-only resource</a>
-	    <a href="#bug/221ac32" class="list-group-item">Attempt to set a breakpoint resulted in kernel panic</a>
-	    
-	    <a id="wrongfunargnum" class="list-group-item disabled">wrong number of arguments in function application</a>
-	    <a href="#bug/e67bc51" class="list-group-item">Null stub missing parameter when !TRACING</a>
-	  </div>
-	  <div id="info" class="main hide">
-	    <h3>Not result found.</h3>
+	      <a id="deadcode" class="list-group-item active">wrong number of arguments in function application</a>
+	      <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug42">
+		      Null stub missing parameter when !TRACING
+		    </a>
+		  </h4>
+		</div>
+		<div id="bug42" class="panel-collapse collapse">
+		  <div class="panel-body">
+		    <div class="row">
+		      <div class="col-md-4">Bug's origin</div>
+		      <div class="col-md-4">Bug</div>
+		      <div class="col-md-4">Bugfix</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	    </div>	    	    	    	    
 	  </div>
 	</div>
       </div>
     </div>
 
-    <div style="display: none;" id="bar" class="progress">
-      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">Loading in progress 100%</div>
-    </div>
-
-    <script src="assets/js/libs/jquery-1.7.1.min.js"></script>
-    <script src="assets/js/libs/underscore-min.js"></script>
-    <script src="assets/js/libs/backbone-min.js"></script>
-    <script src="assets/js/libs/jquery.syntaxhighlighter.min.js"></script>
-    <script src="assets/js/libs/js-yaml.min.js"></script>
-    <script src="assets/js/libs/jquery.infinitescroll.min.js"></script>
-    <script src="assets/js/libs/recaptcha_ajax.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- custom code -->
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/model/Store.js"></script>
-    <script src="assets/js/model/DataProvider.js"></script>
-    <script src="assets/js/model/BugLoader.js"></script>
-    <script src="assets/js/model/NewsLoader.js"></script>
-    <script src="assets/js/utils/Utils.js"></script>
-    <script src="assets/js/utils/TwoDimensionsDictionary.js"></script>
-    <script src="assets/js/controller/BugDisplayer.js"></script>
-    <script src="assets/js/controller/BugController.js"></script>
-    <script src="assets/js/view/AView.js"></script>
-    <script src="assets/js/view/BugView.js"></script>
-    <script src="assets/js/view/HomeView.js"></script>
-    <script src="assets/js/view/SearchView.js"></script>
-    <script src="assets/js/view/ContributionView.js"></script>
-
-    <script type="text/template" id="comment_block">
-      <div class="panel panel-default">
-	<div class="panel-heading">
-	  <%= author %> <%= date %>
-	</div>
-	<div class="panel-body">
-	  <%= content %>
-	</div>
-      </div>
-    </script>
-
-    <script type="text/template" id="comment_tab">
-      <div>
-	<ul class="nav nav-pills pull-right">
-	  <li class="active">
-	    <a href="#comments_modal" data-toggle="modal">Write comment</a>
-	  </li>
-	</ul>
-	<p>You can contribute to this project by writing a comment for this bug.<span class="hide"> No comments have been submitted for this bug yet.</span></p>
-      </div>
-      <section></section>
-    </script>
-
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-33454433-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>
