@@ -55,7 +55,7 @@
 	    <li class="text-primary"><strong>Bug #6:</strong> #ifdef A int x; #endif <-> #ifdef B function(x) #endif</li>
 	    <li class="text-success"><strong>Bug #7:</strong> #ifdef A x = 3; #endif <-> #ifdef B x = 4; #endif</li>
 	    <li class="text-info"><strong>Bug #8:</strong> function(x) <-> function(x, y)</li>
-	    <li class="text-warning"><strong>Bug #9:</strong> #ifdef A function(void) #endif <-> #ifdef B function(int) #endif</li>
+	    <li class="text-warning"><strong>Bug #9:</strong> if { #ifdef A } else { #ifdef A }</li>
 	    <li class="text-danger"><strong>Bug #10:</strong> #ifdef A function() #endif <-> #ifdef B function(3) #endif</li>	    
 	  </ul>	  
 	</p>
@@ -248,10 +248,10 @@
 	    </div>
 	    <div id="bug9" class="panel-collapse collapse">
 	      <div class="panel-body">		
-		<img alt="bug9" src="assets/guidelines/guideline6.png" width="1330" heigth="693">
+		<img alt="bug9" src="assets/guidelines/guideline9.png" width="1330" heigth="693">
 		<ol>
 		  <li>
-		    <a href="#" target="_blank">#</a>
+		    <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7398" target="_blank">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7398</a>
 		  </li>
 		</ol>
 	      </div>
