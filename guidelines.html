@@ -47,11 +47,16 @@
 	  <strong>Projects:</strong> GCC, Gnome, Linux, Libreoffice, Gimp, Firefox, Wireshark<br/>
 	  <strong>Bugs/Guidelines description by colors:</strong><br/>
 	  <ul>
-	    <li class="text-primary"><strong>Bug #1:</strong> x = 3 <-> x = 4</li>
-	    <li class="text-success"><strong>Bug #2:</strong> int x <-> char x</li>
-	    <li class="text-info"><strong>Bug #3:</strong> #ifdef a x # <-> x #ifdef a #</li>
+	    <li class="text-primary"><strong>Bug #1:</strong> x = 3; <-> x = 4;</li>
+	    <li class="text-success"><strong>Bug #2:</strong> int x; <-> char x;</li>
+	    <li class="text-info"><strong>Bug #3:</strong> #ifdef A int x; #endif <-> int x; #ifdef B #endif</li>
 	    <li class="text-warning"><strong>Bug #4:</strong> function(void) <-> function(int)</li>
 	    <li class="text-danger"><strong>Bug #5:</strong> function() <-> function(3)</li>
+	    <li class="text-primary"><strong>Bug #6:</strong> #ifdef A int x; #endif <-> #ifdef B function(x) #endif</li>
+	    <li class="text-success"><strong>Bug #7:</strong> #ifdef A int x #endif <-> #ifdef B char x; #endif</li>
+	    <li class="text-info"><strong>Bug #8:</strong> #ifdef A x = 3; #endif <-> #ifdef B x = 4; #endif</li>
+	    <li class="text-warning"><strong>Bug #9:</strong> #ifdef A function(void) #endif <-> #ifdef B function(int) #endif</li>
+	    <li class="text-danger"><strong>Bug #10:</strong> #ifdef A function() #endif <-> #ifdef B function(3) #endif</li>	    
 	  </ul>	  
 	</p>
       </div>
@@ -72,46 +77,7 @@
 		<img alt="bug1" src="assets/guidelines/guideline1.png" width="1330" heigth="693">
 		<ol>
 		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=711158" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=711158</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=728370" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=728370</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=155733" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=155733</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=312800" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=312800</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=934286" target="_blank">https://bugzilla.mozilla.org/show_bug.cgi?id=934286</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=75982" target="_blank">https://bugzilla.mozilla.org/show_bug.cgi?id=75982</a>
-		  </li>
-		  <li>
 		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=975" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=975</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2350" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2350</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=4263" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=4263</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2996" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2996</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2792" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2792</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=11191" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=11191</a>
-		  </li>
-		  <li>
-		    <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=2130" target="_blank">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=2130</a>
-		  </li>
-		  <li>
-		    <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=5802" target="_blank">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=5802</a>
 		  </li>
 		</ol>
 	      </div>
@@ -135,22 +101,10 @@
 		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=d6c7e1139591b9ba7c4ad9c5eec748f0a68ad212" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=d6c7e1139591b9ba7c4ad9c5eec748f0a68ad212 (bug12)</a>
 		  </li>
 		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=312780" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=312780</a>
-		  </li>
-		  <li>
 		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=1839" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=1839</a>
 		  </li>
 		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=729094" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=729094</a>
-		  </li>
-		  <li>
 		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=3053" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=3053</a>
-		  </li>
-		  <li>
-		    <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7824" target="_blank">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7824</a>
-		  </li>
-		  <li>
-		    <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=3540" target="_blank">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=3540</a>
 		  </li>
 		</ol>
 	      </div>
@@ -176,57 +130,6 @@
 		  <li>
 		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=541413" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=541413</a>
 		  </li>
-		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=168474" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=168474</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=580750" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=580750</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=342406" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=342406</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=651723" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=651723</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=577912" target="_blank">https://bugzilla.mozilla.org/show_bug.cgi?id=577912</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=577913" target="_blank">https://bugzilla.mozilla.org/show_bug.cgi?id=577913</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=774120" target="_blank">https://bugzilla.mozilla.org/show_bug.cgi?id=774120</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=315766" target="_blank">https://bugzilla.mozilla.org/show_bug.cgi?id=315766</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=577915" target="_blank">https://bugzilla.mozilla.org/show_bug.cgi?id=577915</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=807161" target="_blank">https://bugzilla.mozilla.org/show_bug.cgi?id=807161</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=34548" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=34548</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=3118" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=3118</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=804" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=804</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2202" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2202</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2370" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2370</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=24394" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=24394</a>
-		  </li>
-		  <li>
-		    <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7398" target="_blank">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7398</a>
-		  </li>
 		</ol>
 	      </div>
 	    </div>
@@ -246,19 +149,10 @@
 		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=8c8296223f3abb142be8fc31711b18a704c0e7d8" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=8c8296223f3abb142be8fc31711b18a704c0e7d8 (bug2)</a>
 		  </li>
 		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=113638" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=113638</a>
-		  </li>
-		  <li>
-		    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=615068" target="_blank">https://bugzilla.mozilla.org/show_bug.cgi?id=615068</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=1517" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=1517</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=1980" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=1980</a>
-		  </li>
-		  <li>
 		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2429" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2429</a>
+		  </li>
+		  <li>
+		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=11191" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=11191</a>
 		  </li>
 		</ol>
 	      </div>
@@ -273,7 +167,7 @@
 	    </div>
 	    <div id="bug5" class="panel-collapse collapse">
 	      <div class="panel-body">		
-		<img alt="bug1" src="assets/guidelines/guideline5.png" width="1330" heigth="693">
+		<img alt="bug5" src="assets/guidelines/guideline5.png" width="1330" heigth="693">
 		<ol>
 		  <li>
 		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=f3d83e2415445e5b157bef404d38674e9e8de169" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=f3d83e2415445e5b157bef404d38674e9e8de169 (bug1)</a>
@@ -287,17 +181,95 @@
 		  <li>
 		    <a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=24444" target="_blank">https://gcc.gnu.org/bugzilla/show_bug.cgi?id=24444 (bug55)</a>
 		  </li>
+		</ol>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="panel panel-primary">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+		<a data-toggle="collapse" data-parent="#accordion" href="#bug6">Guideline #6</a>
+	      </h4>
+	    </div>
+	    <div id="bug6" class="panel-collapse collapse">
+	      <div class="panel-body">		
+		<img alt="bug1" src="assets/guidelines/guideline6.png" width="1330" heigth="693">
+		<ol>
 		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=628070" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=628070</a>
+		    <a href="#" target="_blank">#</a>
 		  </li>
+		</ol>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="panel panel-success">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+		<a data-toggle="collapse" data-parent="#accordion" href="#bug7">Guideline #7</a>
+	      </h4>
+	    </div>
+	    <div id="bug7" class="panel-collapse collapse">
+	      <div class="panel-body">		
+		<img alt="bug7" src="assets/guidelines/guideline7.png" width="1330" heigth="693">
+		<ol>
 		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=740203" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=740203</a>
+		    <a href="#" target="_blank">#</a>
 		  </li>
+		</ol>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="panel panel-info">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+		<a data-toggle="collapse" data-parent="#accordion" href="#bug8">Guideline #8</a>
+	      </h4>
+	    </div>
+	    <div id="bug8" class="panel-collapse collapse">
+	      <div class="panel-body">		
+		<img alt="bug8" src="assets/guidelines/guideline6.png" width="1330" heigth="693">
+		<ol>
 		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=631105" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=631105</a>
+		    <a href="#" target="_blank">#</a>
 		  </li>
+		</ol>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="panel panel-warning">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+		<a data-toggle="collapse" data-parent="#accordion" href="#bug9">Guideline #9</a>
+	      </h4>
+	    </div>
+	    <div id="bug9" class="panel-collapse collapse">
+	      <div class="panel-body">		
+		<img alt="bug9" src="assets/guidelines/guideline6.png" width="1330" heigth="693">
+		<ol>
 		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2245" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2245</a>
+		    <a href="#" target="_blank">#</a>
+		  </li>
+		</ol>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="panel panel-danger">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+		<a data-toggle="collapse" data-parent="#accordion" href="#bug10">Guideline #10</a>
+	      </h4>
+	    </div>
+	    <div id="bug10" class="panel-collapse collapse">
+	      <div class="panel-body">		
+		<img alt="bug10" src="assets/guidelines/guideline6.png" width="1330" heigth="693">
+		<ol>
+		  <li>
+		    <a href="#" target="_blank">#</a>
 		  </li>
 		</ol>
 	      </div>
