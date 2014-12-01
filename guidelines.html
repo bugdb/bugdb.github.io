@@ -47,16 +47,16 @@
 	  <strong>Projects:</strong> GCC, Gnome, Hurd, Gimp, Inkscape, Linux, Libreoffice, Firefox, Wireshark<br/>
 	  <strong>Bugs/Guidelines description by colors:</strong><br/>
 	  <ul>
-	    <li class="text-primary"><strong>Bug #1:</strong> x = 3; <-> x = 4;</li>
-	    <li class="text-success"><strong>Bug #2:</strong> int x; <-> char x;</li>
-	    <li class="text-info"><strong>Bug #3:</strong> #ifdef A int x; #endif <-> int x; #ifdef B #endif</li>
-	    <li class="text-warning"><strong>Bug #4:</strong> function(void) <-> function(int)</li>
-	    <li class="text-danger"><strong>Bug #5:</strong> function() <-> function(3)</li>
-	    <li class="text-primary"><strong>Bug #6:</strong> #ifdef A include x; #endif <-> y</li>
-	    <li class="text-success"><strong>Bug #7:</strong> #ifdef A int x; #endif <-> int x</li>
-	    <li class="text-info"><strong>Bug #8:</strong> function(x) <-> function(x, y)</li>
-	    <li class="text-warning"><strong>Bug #9:</strong> if { #ifdef A } else { #ifdef A }</li>
-	    <li class="text-danger"><strong>Bug #10:</strong> #ifdef A #include x #endif <-> #include x #ifdef A x #endif</li>
+	    <li class="text-primary"><strong>Bug #1:</strong> x = 3; <-> x = 4; // The cvariable value changed.</li>
+	    <li class="text-success"><strong>Bug #2:</strong> int x; <-> char x; // The variable type was changed.</li>
+	    <li class="text-info"><strong>Bug #3:</strong> #ifdef A int x; #endif <-> int x; #ifdef B #endif // The feature inside feature is call outside this feature.</li>
+	    <li class="text-warning"><strong>Bug #4:</strong> function(void) <-> function(int) // The parameters type changed.</li>
+	    <li class="text-danger"><strong>Bug #5:</strong> function() <-> function(3) // The parameter value changed.</li>
+	    <li class="text-primary"><strong>Bug #6:</strong> #ifdef A include x; #endif <-> y // The feature with include was called outside feature.</li>
+	    <li class="text-success"><strong>Bug #7:</strong> #ifdef A int x; #endif <-> int x //The feature variable was used outside feature.</li>
+	    <li class="text-info"><strong>Bug #8:</strong> function(x) <-> function(x, y) // The parameter send is more than needed.</li>
+	    <li class="text-warning"><strong>Bug #9:</strong> if { #ifdef A } else { #ifdef A } // The if/else empty.</li>
+	    <li class="text-danger"><strong>Bug #10:</strong> #ifdef A #include x #endif <-> #include x #ifdef A x #endif // The include feature was used outside feature.</li>
 	  </ul>	  
 	</p>
       </div>
