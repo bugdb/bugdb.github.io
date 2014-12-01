@@ -43,8 +43,8 @@
     <div class="jumbotron">
       <div class="container">
         <p class="text-justify">
-	  <strong>Guidelines:</strong> Good pratices in C programs with ifdefs through bugs in real code.<br/>
-	  <strong>Projects:</strong> GCC, Gnome, Hurd, Gimp, Linux, Libreoffice, Firefox, Wireshark<br/>
+	  <strong>Guidelines:</strong> Guidelines in use of #ifdef in C/C++ programs.<br/>
+	  <strong>Projects:</strong> GCC, Gnome, Hurd, Gimp, Inkscape, Linux, Libreoffice, Firefox, Wireshark<br/>
 	  <strong>Bugs/Guidelines description by colors:</strong><br/>
 	  <ul>
 	    <li class="text-primary"><strong>Bug #1:</strong> x = 3; <-> x = 4;</li>
@@ -52,7 +52,7 @@
 	    <li class="text-info"><strong>Bug #3:</strong> #ifdef A int x; #endif <-> int x; #ifdef B #endif</li>
 	    <li class="text-warning"><strong>Bug #4:</strong> function(void) <-> function(int)</li>
 	    <li class="text-danger"><strong>Bug #5:</strong> function() <-> function(3)</li>
-	    <li class="text-primary"><strong>Bug #6:</strong> #ifdef A int x; #endif <-> #ifdef B function(x) #endif</li>
+	    <li class="text-primary"><strong>Bug #6:</strong> #ifdef A include x; #endif <-> y</li>
 	    <li class="text-success"><strong>Bug #7:</strong> #ifdef A int x; #endif <-> int x</li>
 	    <li class="text-info"><strong>Bug #8:</strong> function(x) <-> function(x, y)</li>
 	    <li class="text-warning"><strong>Bug #9:</strong> if { #ifdef A } else { #ifdef A }</li>
@@ -230,7 +230,7 @@
 		<img alt="bug1" src="assets/guidelines/guideline6.png" width="1330" heigth="693">
 		<ol>
 		  <li>
-		    <a href="#" target="_blank">#</a>
+		    <a href="https://bugs.launchpad.net/inkscape/+bug/167782" target="_blank">https://bugs.launchpad.net/inkscape/+bug/167782</a>
 		  </li>
 		</ol>
 	      </div>
