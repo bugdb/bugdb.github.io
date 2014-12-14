@@ -47,16 +47,14 @@
 	  <strong>Projects:</strong> GCC, Gnome, Hurd, Gimp, Inkscape, Linux, Libreoffice, Firefox, Wireshark<br/>
 	  <strong>Bugs/Guidelines description by colors:</strong><br/>
 	  <ul>
-	    <li class="text-primary"><strong>Bug #1:</strong> x = 3; <-> x = 4; // The variable value was changed in feature.</li>
-	    <li class="text-success"><strong>Bug #2:</strong> int x; <-> char x; // The variable type was changed in feature.</li>
-	    <li class="text-info"><strong>Bug #3:</strong> #ifdef A int x; #endif <-> int x; #ifdef B #endif // The feature inside feature is called outside this feature.</li>
-	    <li class="text-warning"><strong>Bug #4:</strong> function(void) <-> function(int) // The parameters type was changed in feature.</li>
-	    <li class="text-danger"><strong>Bug #5:</strong> function() <-> function(3) // The parameter value was changed in feature.</li>
-	    <li class="text-primary"><strong>Bug #6:</strong> #ifdef A include x; #endif <-> y // The feature with include was called outside feature.</li>
-	    <li class="text-success"><strong>Bug #7:</strong> #ifdef A int x; #endif <-> int x //The feature variable was used outside feature.</li>
-	    <li class="text-info"><strong>Bug #8:</strong> function(x) <-> function(x, y) // The parameter sent is more than needed.</li>
-	    <li class="text-warning"><strong>Bug #9:</strong> if { #ifdef A } else { #ifdef A } // The if/else empty in feature.</li>
-	    <li class="text-danger"><strong>Bug #10:</strong> #ifdef A #include x #endif <-> #include x #ifdef A x #endif // The include feature was used outside feature.</li>
+	    <li class="text-primary"><strong>Guideline #1:</strong>Verify if value of artefact (variable or function) in some feature was changed and if compatible with your type. <br/>Example:#ifdef A x = 3; #endif x = 4;</li>
+	    <li class="text-success"><strong>Guideline #2:</strong>Verify if condicional block is inside or outside in feature. <br/>Example: if { #ifdef A #endif } else { #ifdef A #endif }</li>
+	    <li class="text-warning"><strong>Guideline #3:</strong>Verify if artefact (variable or function) is inside in optional or mandatory feature which are accessed by other feature but without dependencies. <br/> Example: #ifdef A int x; #endif #ifdef B x #endif</li>
+
+	    <li class="text-danger"><strong>Guideline #4:</strong>Verify if variable was used before inicialize in some feature. <br/> Example: #ifdef A int x; #endif x </li>
+	    <li class="text-info"><strong>Guideline #5:</strong>Verify if variable has same name in some feature. <br/> Example: #ifdef A int x; #endif #ifdef B int x #endif </li>
+	    <li class="text-success"><strong>Guideline #6:</strong>Verify if artefacts are without use in some feature. <br/> Example: #ifdef A int x; char y #endif</li>
+	    
 	  </ul>	  
 	</p>
       </div>
@@ -69,12 +67,12 @@
 	  <div class="panel panel-primary">
 	    <div class="panel-heading">
 	      <h4 class="panel-title">
-		<a data-toggle="collapse" data-parent="#accordion" href="#bug1">Guideline #1</a>
+		<a data-toggle="collapse" data-parent="#accordion" href="#guideline1">Guideline #1</a>
 	      </h4>
 	    </div>
-	    <div id="bug1" class="panel-collapse collapse">
+	    <div id="guideline1" class="panel-collapse collapse">
 	      <div class="panel-body">		
-		<img alt="bug1" src="assets/guidelines/guideline1.png" width="1330" heigth="693">
+		<img alt="guideline1" src="assets/guidelines/guideline1.png" width="1330" heigth="693">
 		<ol>
 		  <li>
 		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=975" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=975</a>
@@ -88,6 +86,33 @@
 		  <li>
 		    <a href="http://savannah.gnu.org/bugs/?func=detailitem&item_id=32676" target="_blank">http://savannah.gnu.org/bugs/?func=detailitem&item_id=32676</a>
 		  </li>
+		  <li>
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=ae249b5fa27f9fba25aa59664d4338efc2dd2394" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=ae249b5fa27f9fba25aa59664d4338efc2dd2394</a>
+		  </li>
+		  <li>
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=d6c7e1139591b9ba7c4ad9c5eec748f0a68ad212" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=d6c7e1139591b9ba7c4ad9c5eec748f0a68ad212</a>
+		  </li>
+		  <li>
+		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=3053" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=3053</a>
+		  </li>
+		  <li>
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=8c8296223f3abb142be8fc31711b18a704c0e7d8" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=8c8296223f3abb142be8fc31711b18a704c0e7d8</a>
+		  </li>
+		  <li>
+		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2429" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2429</a>
+		  </li>
+		  <li>
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=f3d83e2415445e5b157bef404d38674e9e8de169" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=f3d83e2415445e5b157bef404d38674e9e8de169</a>
+		  </li>
+		  <li>
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=c708c57e247775928b9a6bce7b4d8d14883bf39b" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=c708c57e247775928b9a6bce7b4d8d14883bf39b</a>		    
+		  </li>
+		  <li>
+		    <a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=59575" target="_blank">https://gcc.gnu.org/bugzilla/show_bug.cgi?id=59575</a>
+		  </li>
+		  <li>
+		    <a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=24444" target="_blank">https://gcc.gnu.org/bugzilla/show_bug.cgi?id=24444</a>
+		  </li>
 		</ol>
 	      </div>
 	    </div>
@@ -96,42 +121,30 @@
 	  <div class="panel panel-success">
 	    <div class="panel-heading">
 	      <h4 class="panel-title">
-		<a data-toggle="collapse" data-parent="#accordion" href="#bug2">Guideline #2</a>
+		<a data-toggle="collapse" data-parent="#accordion" href="#guideline2">Guideline #2</a>
 	      </h4>
 	    </div>
-	    <div id="bug2" class="panel-collapse collapse">
+	    <div id="guideline2" class="panel-collapse collapse">
 	      <div class="panel-body">		
-		<img alt="bug2" src="assets/guidelines/guideline2.png" width="1330" heigth="693">
+		<img alt="guideline2" src="assets/guidelines/guideline2.png" width="1330" heigth="693">
 		<ol>
 		  <li>
-		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=ae249b5fa27f9fba25aa59664d4338efc2dd2394" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=ae249b5fa27f9fba25aa59664d4338efc2dd2394 (bug7)</a>
-		  </li>
-		  <li>
-		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=d6c7e1139591b9ba7c4ad9c5eec748f0a68ad212" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=d6c7e1139591b9ba7c4ad9c5eec748f0a68ad212 (bug12)</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=1839" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=1839</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=3053" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=3053</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=24394" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=24394</a>
+		    <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7398" target="_blank">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7398</a>
 		  </li>
 		</ol>
 	      </div>
 	    </div>
-	  </div>	  
+	  </div>
 
-	  <div class="panel panel-info">
+	  <div class="panel panel-warning">
 	    <div class="panel-heading">
 	      <h4 class="panel-title">
-		<a data-toggle="collapse" data-parent="#accordion" href="#bug3">Guideline #3</a>
+		<a data-toggle="collapse" data-parent="#accordion" href="#guideline3">Guideline #3</a>
 	      </h4>
 	    </div>
-	    <div id="bug3" class="panel-collapse collapse">
+	    <div id="guideline3" class="panel-collapse collapse">
 	      <div class="panel-body">		
-		<img alt="bug3" src="assets/guidelines/guideline3.png" width="1330" heigth="693">
+		<img alt="guideline3" src="assets/guidelines/guideline3.png" width="1330" heigth="693">
 		<ol>
 		  <li>
 		    <a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=41465" target="_blank">https://gcc.gnu.org/bugzilla/show_bug.cgi?id=41465 (bug54)</a>
@@ -163,122 +176,80 @@
 		  <li>
 		    <a href="http://lists.gnu.org/archive/html/bug-hurd/2011-09/msg00086.html" target="-blank">http://lists.gnu.org/archive/html/bug-hurd/2011-09/msg00086.html</a>
 		  </li>
+		  <li>
+		    <a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=43936" target="_blank">https://gcc.gnu.org/bugzilla/show_bug.cgi?id=43936</a>
+		  </li>
+		  <li>
+		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=3118" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=3118</a>
+		  </li>
+		  <li>
+		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=728370" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=728370</a>
+		  </li>
+		  <li>
+		    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=a" target="_blank">https://bugzilla.mozilla.org/show_bug.cgi?id=a</a>
+		  </li>
+		  <li>
+		    <a href=" https://gcc.gnu.org/bugzilla/show_bug.cgi?id=47571" target="_blank"> https://gcc.gnu.org/bugzilla/show_bug.cgi?id=47571</a>
+		  </li>
+		  <li>
+		    <a href="https://git.gnome.org/browse/libxml2/commit/?id=41586ca6674d2fae32b17156494cb6f244ac1170" target="_blank">https://git.gnome.org/browse/libxml2/commit/?id=41586ca6674d2fae32b17156494cb6f244ac1170</a>
+		  </li>
+		  <li>
+		    <a href="https://git.gnome.org/browse/libxml2/commit/?id=52010c639a5da3d40ef73d9aff5c43c3a642661c" target="_blank">https://git.gnome.org/browse/libxml2/commit/?id=52010c639a5da3d40ef73d9aff5c43c3a642661c</a>
+		  </li>
+		  <li>
+		    <a href="https://git.gnome.org/browse/libxml2/commit/?id=0c7109c81f3de1408ddac898bce0aa21823e3507" target="_blank">https://git.gnome.org/browse/libxml2/commit/?id=0c7109c81f3de1408ddac898bce0aa21823e3507</a>
+		  </li>
+		  <li>
+		    <a href="https://git.gnome.org/browse/libxml2/commit/?id=3313d14f9d71e5beeb51169688b69f3a34fe4489" target="_blank">https://git.gnome.org/browse/libxml2/commit/?id=3313d14f9d71e5beeb51169688b69f3a34fe4489</a>
+		  </li>
+		  <li>
+		    <a href="https://git.gnome.org/browse/libgda/commit/?id=e4820b869a088c7cf5328ff4d7a7f5caf36e5e33" target="_blank">https://git.gnome.org/browse/libgda/commit/?id=e4820b869a088c7cf5328ff4d7a7f5caf36e5e33</a>
+		  </li>
+		  <li>
+		    <a href="https://git.gnome.org/browse/libgda/commit/?id=deea473d2ebbc5c61968ee088b91d3ca650df478" target="_blank">https://git.gnome.org/browse/libgda/commit/?id=deea473d2ebbc5c61968ee088b91d3ca650df478</a>
+		  </li>
+		  <li>
+		    <a href="https://git.gnome.org/browse/libgda/commit/?id=449780910651ee2f551ed795880bafda62ee582f" target="_blank">https://git.gnome.org/browse/libgda/commit/?id=449780910651ee2f551ed795880bafda62ee582f</a>
+		  </li>
+		  <li>
+		    <a href="https://git.gnome.org/browse/gtk+/commit/?id=1c099ec78489ac29a74cfcbdb953f7282652d72b" target="_blank">https://git.gnome.org/browse/gtk+/commit/?id=1c099ec78489ac29a74cfcbdb953f7282652d72b</a>
+		  </li>
+		  <li>
+		    <a href="https://git.gnome.org/browse/nautilus/commit/?id=bf8571a78f1f8c73ea449e56fa413abb3f40b91c" target="_blank">https://git.gnome.org/browse/nautilus/commit/?id=bf8571a78f1f8c73ea449e56fa413abb3f40b91c</a>
+		  </li>
+		  <li>
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=f48ec1d7885281a9c6cd7779d61f321d1b1fd741" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=f48ec1d7885281a9c6cd7779d61f321d1b1fd741</a>
+		  </li>
 		</ol>
 	      </div>
 	    </div>
-	  </div>	  
-
-	  <div class="panel panel-warning">
-	    <div class="panel-heading">
-	      <h4 class="panel-title">
-		<a data-toggle="collapse" data-parent="#accordion" href="#bug4">Guideline #4</a>
-	      </h4>
-	    </div>
-	    <div id="bug4" class="panel-collapse collapse">
-	      <div class="panel-body">		
-		<img alt="bug4" src="assets/guidelines/guideline4.png" width="1330" heigth="693">
-		<ol>
-		  <li>
-		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=8c8296223f3abb142be8fc31711b18a704c0e7d8" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=8c8296223f3abb142be8fc31711b18a704c0e7d8 (bug2)</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2429" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2429</a>
-		  </li>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=11191" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=11191</a>
-		  </li>
-		</ol>
-	      </div>
-	    </div>
-	  </div>	  
-
+	  </div>
+	  
 	  <div class="panel panel-danger">
 	    <div class="panel-heading">
 	      <h4 class="panel-title">
-		<a data-toggle="collapse" data-parent="#accordion" href="#bug5">Guideline #5</a>
+		<a data-toggle="collapse" data-parent="#accordion" href="#guideline4">Guideline #4</a>
 	      </h4>
 	    </div>
-	    <div id="bug5" class="panel-collapse collapse">
+	    <div id="guideline4" class="panel-collapse collapse">
 	      <div class="panel-body">		
-		<img alt="bug5" src="assets/guidelines/guideline5.png" width="1330" heigth="693">
+		<img alt="guideline4" src="assets/guidelines/guideline4.png" width="1330" heigth="693">
 		<ol>
 		  <li>
-		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=f3d83e2415445e5b157bef404d38674e9e8de169" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=f3d83e2415445e5b157bef404d38674e9e8de169 (bug1)</a>
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=1c17e4d4437d8045a596d9f06c1558dc09e2b372" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=1c17e4d4437d8045a596d9f06c1558dc09e2b372</a>
 		  </li>
 		  <li>
-		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=c708c57e247775928b9a6bce7b4d8d14883bf39b" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=c708c57e247775928b9a6bce7b4d8d14883bf39b (bug13)</a>
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=30e053248da178cf6154bb7e950dc8713567e3fa" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=30e053248da178cf6154bb7e950dc8713567e3fa</a>
 		  </li>
 		  <li>
-		    <a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=59575" target="_blank">https://gcc.gnu.org/bugzilla/show_bug.cgi?id=59575 (bug45)</a>
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=7acf6cd80b201f77371a5374a786144153629be8" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=7acf6cd80b201f77371a5374a786144153629be8</a>
 		  </li>
 		  <li>
-		    <a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=24444" target="_blank">https://gcc.gnu.org/bugzilla/show_bug.cgi?id=24444 (bug55)</a>
-		  </li>
-		</ol>
-	      </div>
-	    </div>
-	  </div>
-
-	  <div class="panel panel-primary">
-	    <div class="panel-heading">
-	      <h4 class="panel-title">
-		<a data-toggle="collapse" data-parent="#accordion" href="#bug6">Guideline #6</a>
-	      </h4>
-	    </div>
-	    <div id="bug6" class="panel-collapse collapse">
-	      <div class="panel-body">		
-		<img alt="bug1" src="assets/guidelines/guideline6.png" width="1330" heigth="693">
-		<ol>
-		  <li>
-		    <a href="https://bugs.launchpad.net/inkscape/+bug/167782" target="_blank">https://bugs.launchpad.net/inkscape/+bug/167782</a>
-		  </li>
-		</ol>
-	      </div>
-	    </div>
-	  </div>
-
-	  <div class="panel panel-success">
-	    <div class="panel-heading">
-	      <h4 class="panel-title">
-		<a data-toggle="collapse" data-parent="#accordion" href="#bug7">Guideline #7</a>
-	      </h4>
-	    </div>
-	    <div id="bug7" class="panel-collapse collapse">
-	      <div class="panel-body">		
-		<img alt="bug7" src="assets/guidelines/guideline7.png" width="1330" heigth="693">
-		<ol>
-		  <li>
-		    <a href="http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00230.html" target="_blank">http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00230.html</a>
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=bc8cec0dff072f1a45ce7f6b2c5234bb3411ac51" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=bc8cec0dff072f1a45ce7f6b2c5234bb3411ac51</a>
 		  </li>
 		  <li>
-		    <a href="http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00216.html" target="_blank">http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00216.html</a>
-		  </li>
-		  <li>
-		    <a href="http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00215.html" target="_blank">http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00215.html</a>
-		  </li>
-		  <li>
-		    <a href="http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00213.html" target="_blank">http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00213.html</a>
-		  </li>
-		  <li>
-		    <a href="http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00116.html" target="_blank">http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00116.html</a>
-		  </li>
-		  <li>
-		    <a href="http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00115.html" target="_blank">http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00115.html</a>
-		  </li>
-		  <li>
-		    <a href="http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00104.html" target="_blank">http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00104.html</a>
-		  </li>
-		  <li>
-		    <a href="http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00097.html" target="_blank">http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00097.html</a>
-		  </li>
-		  <li>
-		    <a href="http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00094.html" target="_blank">http://lists.gnu.org/archive/html/bug-hurd/2013-12/msg00094.html</a>
-		  </li>
-		  <li>
-		    <a href="http://savannah.nongnu.org/bugs/?func=detailitem&item_id=4301" target="_blank">http://savannah.nongnu.org/bugs/?func=detailitem&item_id=4301</a>
-		  </li>
-		  <li>
-		    <a href="http://savannah.gnu.org/bugs/?func=detailitem&item_id=11689" target="_blank">http://savannah.gnu.org/bugs/?func=detailitem&item_id=11689</a>
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=e39363a9def53dd4086be107dc8b3ebca09f045d" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=e39363a9def53dd4086be107dc8b3ebca09f045d</a>
 		  </li>
 		</ol>
 	      </div>
@@ -288,57 +259,45 @@
 	  <div class="panel panel-info">
 	    <div class="panel-heading">
 	      <h4 class="panel-title">
-		<a data-toggle="collapse" data-parent="#accordion" href="#bug8">Guideline #8</a>
+		<a data-toggle="collapse" data-parent="#accordion" href="#guideline5">Guideline #5</a>
 	      </h4>
 	    </div>
-	    <div id="bug8" class="panel-collapse collapse">
+	    <div id="guideline5" class="panel-collapse collapse">
 	      <div class="panel-body">		
-		<img alt="bug8" src="assets/guidelines/guideline8.png" width="1330" heigth="693">
+		<img alt="guideline5" src="assets/guidelines/guideline5.png" width="1330" heigth="693">
 		<ol>
 		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2245" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=2245</a>
+		    <a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=41465" target="_blank">https://gcc.gnu.org/bugzilla/show_bug.cgi?id=41465</a>
 		  </li>
 		</ol>
 	      </div>
 	    </div>
 	  </div>
-
-	  <div class="panel panel-warning">
+	  
+	  <div class="panel panel-success">
 	    <div class="panel-heading">
 	      <h4 class="panel-title">
-		<a data-toggle="collapse" data-parent="#accordion" href="#bug9">Guideline #9</a>
+		<a data-toggle="collapse" data-parent="#accordion" href="#guideline6">Guideline #6</a>
 	      </h4>
 	    </div>
-	    <div id="bug9" class="panel-collapse collapse">
+	    <div id="guideline6" class="panel-collapse collapse">
 	      <div class="panel-body">		
-		<img alt="bug9" src="assets/guidelines/guideline9.png" width="1330" heigth="693">
+		<img alt="guideline6" src="assets/guidelines/guideline6.png" width="1330" heigth="693">
 		<ol>
 		  <li>
-		    <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7398" target="_blank">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7398</a>
-		  </li>
-		</ol>
-	      </div>
-	    </div>
-	  </div>
-
-	  <div class="panel panel-danger">
-	    <div class="panel-heading">
-	      <h4 class="panel-title">
-		<a data-toggle="collapse" data-parent="#accordion" href="#bug10">Guideline #10</a>
-	      </h4>
-	    </div>
-	    <div id="bug10" class="panel-collapse collapse">
-	      <div class="panel-body">		
-		<img alt="bug10" src="assets/guidelines/guideline10.png" width="1330" heigth="693">
-		<ol>
-		  <li>
-		    <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=3118" target="_blank">https://www.libreoffice.org/bugzilla/show_bug.cgi?id=3118</a>
+		    <a href="https://git.gnome.org/browse/libxml2/commit/?id=1af8b7b22e3bb569b2c27642064224bc14a1924a" target="_blank">https://git.gnome.org/browse/libxml2/commit/?id=1af8b7b22e3bb569b2c27642064224bc14a1924a</a>
 		  </li>
 		  <li>
-		    <a href="https://bugzilla.gnome.org/show_bug.cgi?id=728370" target="_blank">https://bugzilla.gnome.org/show_bug.cgi?id=728370</a>
+		    <a href="https://git.gnome.org/browse/libgda/commit/?id=82fee4d9591a743894b8294aa923bbb0c9bbcace" target="_blank">https://git.gnome.org/browse/libgda/commit/?id=82fee4d9591a743894b8294aa923bbb0c9bbcace</a>
 		  </li>
 		  <li>
-		    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=75982" target="_blank">https://bugzilla.mozilla.org/show_bug.cgi?id=75982</a>
+		    <a href="https://git.gnome.org/browse/gtk+/commit/?id=09ecba9a53961c362044a04e40910ea2d6f34cd3" target="_blank">https://git.gnome.org/browse/gtk+/commit/?id=09ecba9a53961c362044a04e40910ea2d6f34cd3</a>
+		  </li>
+		  <li>
+		    <a href="https://git.gnome.org/browse/gtk+/commit/?id=694c8d32d5fab4ef8d0139a910cee95200c34d8a" target="_blank">https://git.gnome.org/browse/gtk+/commit/?id=694c8d32d5fab4ef8d0139a910cee95200c34d8a</a>
+		  </li>
+		  <li>
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=36855dcfc980f247909b8f63776664c6ccb6f183" target="_blank">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=36855dcfc980f247909b8f63776664c6ccb6f183</a>
 		  </li>
 		</ol>
 	      </div>
