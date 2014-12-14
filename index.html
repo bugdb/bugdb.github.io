@@ -430,321 +430,1009 @@
 		</div>
 	      </div>
 
-	      <a id="b11" class="list-group-item active">read out of the intended bounds</a>
+	      <!--Begin MP -->
+	      <a id="deadcode" class="list-group-item active">read out of the intended bounds</a>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
+
 		    <a data-toggle="collapse" data-parent="#accordion" href="#bug22">
-		      Array is accessed out of its bounds in some configurations
-		    </a>
-		  </h4>
-		</div>
-		<div id="bug22" class="panel-collapse collapse">
-		  <div class="panel-body">
-		    bug 22
-		  </div>
-		</div>
-	      </div>
-	      <div class="panel panel-default">
-		<div class="panel-heading">
-		  <h4 class="panel-title">
-		    <a data-toggle="collapse" data-parent="#accordion" href="#bug23">
+
 		      Function incorrectly returning (int)255 on failure causes kernel panic
+
 		    </a>
+
 		  </h4>
+
 		</div>
+
+		<div id="bug22" class="panel-collapse collapse">
+
+		  <div class="panel-body">
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/91ea820">http://vbdb.itu.dk/#bug/91ea820</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/parisc/mm/init.c?id=02706647a49011ae1e7b4eca33e835d1681b094e">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/parisc/mm/init.c?id=02706647a49011ae1e7b4eca33e835d1681b094e</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/parisc/mm/init.c?id=8039de10aae3cd4cf0ef0ccebd58aff0e8810df2">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/parisc/mm/init.c?id=8039de10aae3cd4cf0ef0ccebd58aff0e8810df2</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/arch/parisc/mm/init.c?id=8039de10aae3cd4cf0ef0ccebd58aff0e8810df2">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/arch/parisc/mm/init.c?id=8039de10aae3cd4cf0ef0ccebd58aff0e8810df2</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/arch/parisc/mm/init.c?id=91ea8207168793b365322be3c90a4ee9e8b03ed4">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/arch/parisc/mm/init.c?id=91ea8207168793b365322be3c90a4ee9e8b03ed4</a>
+
+		    </p>
+
+		    <img alt="bug22" src="assets/bugs/bug22.png"  width="1330" heigth="693"/>
+
+		  </div>
+
+		</div>
+
+	      </div>
+
+	      <div class="panel panel-default">
+
+		<div class="panel-heading">
+
+		  <h4 class="panel-title">
+
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug23">
+
+		      Array is accessed out of its bounds in some configurations
+
+		    </a>
+
+		  </h4>
+
+		</div>
+
 		<div id="bug23" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 23
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/0f8f809">http://vbdb.itu.dk/#bug/0f8f809</a>
+
+		      <br/>
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/slab.c?h=linux-3.10.y&id=254844d3b9959b52fedf2f22810cc66e82a1ca16">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/slab.c?h=linux-3.10.y&id=254844d3b9959b52fedf2f22810cc66e82a1ca16</a>
+
+		      <br/>
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/slab.c?h=linux-3.10.y&id=292088ee032d0df59e7c8a7a00e9b97260146078">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/slab.c?h=linux-3.10.y&id=292088ee032d0df59e7c8a7a00e9b97260146078</a>
+
+		      <br/>
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/mm/slab.c?h=linux-3.10.y&id=292088ee032d0df59e7c8a7a00e9b97260146078&id2=254844d3b9959b52fedf2f22810cc66e82a1ca16">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/mm/slab.c?h=linux-3.10.y&id=292088ee032d0df59e7c8a7a00e9b97260146078&id2=254844d3b9959b52fedf2f22810cc66e82a1ca16</a>
+
+		      <br/>
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/slab.c?id=0f8f8094d28eb53368ac09186ea6b3a324cc7d44">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/slab.c?id=0f8f8094d28eb53368ac09186ea6b3a324cc7d44</a>
+
+
+
+		    </p>
+
+		    <img alt="bug23" src="assets/bugs/bug23.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
 
-	      <a id="b12" class="list-group-item active">SysFS API violation</a>
+
+
+	      <a id="deadcode" class="list-group-item active">SysFS API violation</a>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
+
 		    <a data-toggle="collapse" data-parent="#accordion" href="#bug24">
+
 		      Kernel panic due to double enable_IR_x2apic() call on non-SMP boards
+
 		    </a>
+
 		  </h4>
+
 		</div>
+
 		<div id="bug24" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 24
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/472a474">http://vbdb.itu.dk/#bug/472a474</a>
+
+		      <br/>
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/x86/kernel/apic.c?h=linux-2.6.29.y">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/x86/kernel/apic.c?h=linux-2.6.29.y</a>
+
+		      <br/>
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/x86/kernel/apic/apic.c?h=linux-2.6.30.y">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/x86/kernel/apic/apic.c?h=linux-2.6.30.y</a>
+
+		      <br/>
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/x86/kernel/apic/apic.c?h=linux-2.6.32.y">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/x86/kernel/apic/apic.c?h=linux-2.6.32.y</a>
+
+		    </p>
+
+		    <img alt="bug24" src="assets/bugs/bug24.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
 
-	      <a id="b13" class="list-group-item active">undeclared identifier</a>
+
+
+	      <a id="deadcode" class="list-group-item active">undeclared identifier</a>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
+
 		    <a data-toggle="collapse" data-parent="#accordion" href="#bug25">
+
 		      Undefined reference to macro when !BLK_CGROUP
+
 		    </a>
+
 		  </h4>
+
 		</div>
+
 		<div id="bug25" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 25
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/f48ec1d">http://vbdb.itu.dk/#bug/f48ec1d</a>
+
+		      <br/>
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/block/blk-cgroup.h?id=8a3d26151f24e2a2ffa550890144c3d54d2edb15">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/block/blk-cgroup.h?id=8a3d26151f24e2a2ffa550890144c3d54d2edb15</a>
+
+		      <br/>
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/block/blk-cgroup.h?id=3381cb8d2ef1523dbaeec99161d766c25f1e52d6">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/block/blk-cgroup.h?id=3381cb8d2ef1523dbaeec99161d766c25f1e52d6</a>
+
+		      <br/>
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/block/blk-cgroup.h?id=f48ec1d7885281a9c6cd7779d61f321d1b1fd741">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/block/blk-cgroup.h?id=f48ec1d7885281a9c6cd7779d61f321d1b1fd741</a>
+
+
+
+		    </p>
+
+		    <img alt="bug25" src="assets/bugs/bug25.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
 
-	      <a id="b14" class="list-group-item active">undefined symbol reference</a>
+
+
+	      <a id="deadcode" class="list-group-item active">undefined symbol reference</a>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
+
 		    <a data-toggle="collapse" data-parent="#accordion" href="#bug26">
-		      Selecting ACPI_VIDEO but not its dependencies causes a build error
-		    </a>
-		  </h4>
-		</div>
-		<div id="bug26" class="panel-collapse collapse">
-		  <div class="panel-body">
-		    bug 26
-		  </div>
-		</div>
-	      </div>
-	      <div class="panel panel-default">
-		<div class="panel-heading">
-		  <h4 class="panel-title">
-		    <a data-toggle="collapse" data-parent="#accordion" href="#bug27">
-		      Undefined reference due to missing dependency on I2C
-		    </a>
-		  </h4>
-		</div>
-		<div id="bug27" class="panel-collapse collapse">
-		  <div class="panel-body">
-		    bug 27
-		  </div>
-		</div>
-	      </div>
-	      <div class="panel panel-default">
-		<div class="panel-heading">
-		  <h4 class="panel-title">
-		    <a data-toggle="collapse" data-parent="#accordion" href="#bug28">
-		      Undefined references to OMAP2420 functions
-		    </a>
-		  </h4>
-		</div>
-		<div id="bug28" class="panel-collapse collapse">
-		  <div class="panel-body">
-		    bug 28
-		  </div>
-		</div>
-	      </div>
-	      <div class="panel panel-default">
-		<div class="panel-heading">
-		  <h4 class="panel-title">
-		    <a data-toggle="collapse" data-parent="#accordion" href="#bug29">
+
 		      Build error due to missing dependency of BCM47XXX on EXTIF
+
 		    </a>
+
 		  </h4>
+
 		</div>
-		<div id="bug29" class="panel-collapse collapse">
+
+		<div id="bug26" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 29
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/2f02c15">http://vbdb.itu.dk/#bug/2f02c15</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/mips/Kconfig?id=ea202c632a52c4a83f1bd82d8d06bc8e04f2689a">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/mips/Kconfig?id=ea202c632a52c4a83f1bd82d8d06bc8e04f2689a</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/mips/Kconfig?id=1c0c13eb935c95fd2ca0b0aca6dd4860487fb242">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/mips/Kconfig?id=1c0c13eb935c95fd2ca0b0aca6dd4860487fb242</a> [http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/mips/Kconfig?id=940f6b48a130e0a33cb8bd397dd0e277166470ad]
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/arch/mips/Kconfig?id=1c0c13eb935c95fd2ca0b0aca6dd4860487fb242">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/arch/mips/Kconfig?id=1c0c13eb935c95fd2ca0b0aca6dd4860487fb242</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/mips/Kconfig?id=2f02c15a5d963007bd721d76f644c9491f6fec06">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/mips/Kconfig?id=2f02c15a5d963007bd721d76f644c9491f6fec06</a>
+
+
+
+		    </p>
+
+		    <img alt="bug26" src="assets/bugs/bug26.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
-		    <a data-toggle="collapse" data-parent="#accordion" href="#bug30">
+
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug27">
+
 		      Undefined reference to cryptographic function
+
 		    </a>
+
 		  </h4>
+
 		</div>
+
+		<div id="bug27" class="panel-collapse collapse">
+
+		  <div class="panel-body">
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/242f1a3">http://vbdb.itu.dk/#bug/242f1a3</a>
+
+		      <br />
+
+
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/crypto/Kconfig?id=1da177e4c3f41524e886b7f1b8a0c1fc7321cac2">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/crypto/Kconfig?id=1da177e4c3f41524e886b7f1b8a0c1fc7321cac2</a> [http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/crypto/Kconfig?id=d1cda4e39638e906f022c8ce56f566b617e1f77e]
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/crypto/Kconfig?id=242f1a343776a621ad5c3446d6f2718d37863cb5">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/crypto/Kconfig?id=242f1a343776a621ad5c3446d6f2718d37863cb5</a>
+
+		    </p>
+
+		    <img alt="bug27" src="assets/bugs/bug27.png" width="1330" heigth="693"/>
+
+		  </div>
+
+		</div>
+
+	      </div>
+
+	      <div class="panel panel-default">
+
+		<div class="panel-heading">
+
+		  <h4 class="panel-title">
+
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug28">
+
+		      Selecting ACPI_VIDEO but not its dependencies causes a build error
+
+		    </a>
+
+		  </h4>
+
+		</div>
+
+		<div id="bug28" class="panel-collapse collapse">
+
+		  <div class="panel-body">
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/7c6048b">http://vbdb.itu.dk/#bug/7c6048b</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/stub/Kconfig?id=e26fd1199ebab0d469fc3e037da5932d382f0669">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/stub/Kconfig?id=e26fd1199ebab0d469fc3e037da5932d382f0669</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/stub/Kconfig?id=7c6048b7c83690ce59e65922fb2875479a22300e">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/stub/Kconfig?id=7c6048b7c83690ce59e65922fb2875479a22300e</a>
+
+		    </p>
+
+		    <img alt="bug28" src="assets/bugs/bug28.png" width="1330" heigth="693"/>
+
+		  </div>
+
+		</div>
+
+	      </div>
+
+	      <div class="panel panel-default">
+
+		<div class="panel-heading">
+
+		  <h4 class="panel-title">
+
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug29">
+
+		      Undefined references to OMAP2420 functions
+
+		    </a>
+
+		  </h4>
+
+		</div>
+
+		<div id="bug29" class="panel-collapse collapse">
+
+		  <div class="panel-body">
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/6515e48">http://vbdb.itu.dk/#bug/6515e48</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/arm/mach-omap2/Kconfig?id=d10f2b6e745f1232ff6517b335faf3bfd7005bec ou http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/arch/arm/mach-omap2/Kconfig?id=1dbae815a724303b46ab4663b5fc23c13e9d9690">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/arm/mach-omap2/Kconfig?id=d10f2b6e745f1232ff6517b335faf3bfd7005bec ou http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/arch/arm/mach-omap2/Kconfig?id=1dbae815a724303b46ab4663b5fc23c13e9d9690</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/arm/mach-omap2/Kconfig?id=088ef950dc0dd58d2f339e1616c9092fea923f06">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/arm/mach-omap2/Kconfig?id=088ef950dc0dd58d2f339e1616c9092fea923f06</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/arch/arm/mach-omap2/Kconfig?id=088ef950dc0dd58d2f339e1616c9092fea923f06">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/arch/arm/mach-omap2/Kconfig?id=088ef950dc0dd58d2f339e1616c9092fea923f06</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/arm/mach-omap2/Kconfig?id=6515e48932c8bf04227f9dd638c8ac634f89ba24">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/arm/mach-omap2/Kconfig?id=6515e48932c8bf04227f9dd638c8ac634f89ba24</a>
+
+		    </p>
+
+		    <img alt="bug29" src="assets/bugs/bug29.png" width="1330" heigth="693"/>
+
+		  </div>
+
+		</div>
+
+	      </div>
+
+	      <div class="panel panel-default">
+
+		<div class="panel-heading">
+
+		  <h4 class="panel-title">
+
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug30">
+
+		      Undefined reference due to missing dependency on I2C
+
+		    </a>
+
+		  </h4>
+
+		</div>
+
 		<div id="bug30" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 30
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/6651791">http://vbdb.itu.dk/#bug/6651791</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/sound/soc/sh/Kconfig?id=98615454f66175e923f239ab1d1bd85cd618363e">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/sound/soc/sh/Kconfig?id=98615454f66175e923f239ab1d1bd85cd618363e</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/sound/soc/sh/Kconfig?id=038494059f795849012a96adba2ab73e65b94ba5">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/sound/soc/sh/Kconfig?id=038494059f795849012a96adba2ab73e65b94ba5</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/sound/soc/sh/Kconfig?id=038494059f795849012a96adba2ab73e65b94ba5">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/sound/soc/sh/Kconfig?id=038494059f795849012a96adba2ab73e65b94ba5</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=66517915e0954ee027b889f452511945f7a9f3ec">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=66517915e0954ee027b889f452511945f7a9f3ec</a>
+
+
+
+		    </p>
+
+		    <img alt="bug30" src="assets/bugs/bug30.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
 
-	      <a id="b15" class="list-group-item active">use of variable before initialization</a>
+
+
+	      <a id="deadcode" class="list-group-item active">use of variable before initialization</a>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
+
 		    <a data-toggle="collapse" data-parent="#accordion" href="#bug31">
+
 		      Use of variable before initialization when !SECURITY
+
 		    </a>
+
 		  </h4>
+
 		</div>
+
 		<div id="bug31" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 31
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/30e0532">http://vbdb.itu.dk/#bug/30e0532</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/include/linux/security.h?id=1e39f384bb01b0395b69cb70c2cacae65012f203">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/include/linux/security.h?id=1e39f384bb01b0395b69cb70c2cacae65012f203</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/include/linux/security.h?id=7d8db1808a2001077a9f966180c5e4f7cc20d4c7">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/include/linux/security.h?id=7d8db1808a2001077a9f966180c5e4f7cc20d4c7</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/include/linux/security.h?id=30e053248da178cf6154bb7e950dc8713567e3fa">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/include/linux/security.h?id=30e053248da178cf6154bb7e950dc8713567e3fa</a>
+
+		    </p>
+
+		    <img alt="bug31" src="assets/bugs/bug31.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
+
 		    <a data-toggle="collapse" data-parent="#accordion" href="#bug32">
-		      Dereferencing uninitialized pointer causes Kernel crash
-		    </a>
-		  </h4>
-		</div>
-		<div id="bug32" class="panel-collapse collapse">
-		  <div class="panel-body">
-		    bug 32
-		  </div>
-		</div>
-	      </div>
-	      <div class="panel panel-default">
-		<div class="panel-heading">
-		  <h4 class="panel-title">
-		    <a data-toggle="collapse" data-parent="#accordion" href="#bug33">
+
 		      An uninitialized string may be displayed if !CONFIG_RCU_FAST_NO_HZ.
+
 		    </a>
+
 		  </h4>
+
 		</div>
+
+		<div id="bug32" class="panel-collapse collapse">
+
+		  <div class="panel-body">
+
+		    <a href="http://vbdb.itu.dk/#bug/1c17e4d">http://vbdb.itu.dk/#bug/1c17e4d</a>
+
+		    <br />
+
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/kernel/rcutree_plugin.h?id=a858af2875fb291d0f4b0a4419fefbf03c2379c0">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/kernel/rcutree_plugin.h?id=a858af2875fb291d0f4b0a4419fefbf03c2379c0</a>
+
+		    <br />
+
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/kernel/rcutree_plugin.h?id=27565d64a4e564e72c22d8c91a3cfcb9442383e8">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/kernel/rcutree_plugin.h?id=27565d64a4e564e72c22d8c91a3cfcb9442383e8</a>
+
+		    <br />
+
+		    <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/kernel/rcutree_plugin.h?id=1c17e4d4437d8045a596d9f06c1558dc09e2b372">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/kernel/rcutree_plugin.h?id=1c17e4d4437d8045a596d9f06c1558dc09e2b372</a>
+
+
+
+		    <img alt="bug32" src="assets/bugs/bug32.png" width="1330" heigth="693"/>
+
+		  </div>
+
+		</div>
+
+	      </div>
+
+	      <div class="panel panel-default">
+
+		<div class="panel-heading">
+
+		  <h4 class="panel-title">
+
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug33">
+
+		      Dereferencing uninitialized pointer causes Kernel crash
+
+		    </a>
+
+		  </h4>
+
+		</div>
+
 		<div id="bug33" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 33
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/7acf6cd">http://vbdb.itu.dk/#bug/7acf6cd</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/drivers/tty/pty.c?id=fa2ecfc5a68d85624bbd84f7d010860776b7e602">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/drivers/tty/pty.c?id=fa2ecfc5a68d85624bbd84f7d010860776b7e602</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/tty/pty.c?id=1dcb8e6d1c23f2e021639199fdf64d5b42689207">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/tty/pty.c?id=1dcb8e6d1c23f2e021639199fdf64d5b42689207</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=7acf6cd80b201f77371a5374a786144153629be8">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=7acf6cd80b201f77371a5374a786144153629be8</a>
+
+		    </p>
+
+		    <img alt="bug33" src="assets/bugs/bug33.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
+
 		    <a data-toggle="collapse" data-parent="#accordion" href="#bug34">
-		      Netpoll_setup() returns an uninitialized value (error code)
-		    </a>
-		  </h4>
-		</div>
-		<div id="bug34" class="panel-collapse collapse">
-		  <div class="panel-body">
-		    bug 34
-		  </div>
-		</div>
-	      </div>
-	      <div class="panel panel-default">
-		<div class="panel-heading">
-		  <h4 class="panel-title">
-		    <a data-toggle="collapse" data-parent="#accordion" href="#bug35">
+
 		      Non-initialized buffer causes kernel panic in JFFS2
+
 		    </a>
+
 		  </h4>
+
 		</div>
+
+		<div id="bug34" class="panel-collapse collapse">
+
+		  <div class="panel-body">
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/bc8cec0">http://vbdb.itu.dk/#bug/bc8cec0</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/fs/jffs2/wbuf.c?id=b3ce1debe2685383a9ad6ace9c49869c3968c013">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/fs/jffs2/wbuf.c?id=b3ce1debe2685383a9ad6ace9c49869c3968c013</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/fs/jffs2/wbuf.c?id=f99d49adf527fa6f7a9c42257fa76bca6b8df1e3">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/fs/jffs2/wbuf.c?id=f99d49adf527fa6f7a9c42257fa76bca6b8df1e3</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/fs/jffs2/wbuf.c?id=bc8cec0dff072f1a45ce7f6b2c5234bb3411ac51">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/fs/jffs2/wbuf.c?id=bc8cec0dff072f1a45ce7f6b2c5234bb3411ac51</a>
+
+		    </p>
+
+		    <img alt="bug34" src="assets/bugs/bug34.png" width="1330" heigth="693"/>
+
+		  </div>
+
+		</div>
+
+	      </div>
+
+	      <div class="panel panel-default">
+
+		<div class="panel-heading">
+
+		  <h4 class="panel-title">
+
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug35">
+
+		      Netpoll_setup() returns an uninitialized value (error code)
+
+		    </a>
+
+		  </h4>
+
+		</div>
+
 		<div id="bug35" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 35
+
+		    <img alt="bug35" src="assets/bugs/bug35.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
 
-	      <a id="b16" class="list-group-item active">unused variable</a>
+
+
+	      <a id="deadcode" class="list-group-item active">unused variable</a>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
+
 		    <a data-toggle="collapse" data-parent="#accordion" href="#bug36">
+
 		      Unused variable when BF60x is enabled
+
 		    </a>
+
 		  </h4>
+
 		</div>
+
 		<div id="bug36" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 36
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/36855dc">http://vbdb.itu.dk/#bug/36855dc</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/arch/blackfin/mach-common/pm.c?id=1efc80b53eb54770139219f99657abd92595fc86">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/arch/blackfin/mach-common/pm.c?id=1efc80b53eb54770139219f99657abd92595fc86</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/blackfin/mach-common/pm.c?id=cfefe3c683e0d14c9ce3aeb883c55c7f30c20183">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/blackfin/mach-common/pm.c?id=cfefe3c683e0d14c9ce3aeb883c55c7f30c20183</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/blackfin/mach-common/pm.c?id=36855dcfc980f247909b8f63776664c6ccb6f183">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/arch/blackfin/mach-common/pm.c?id=36855dcfc980f247909b8f63776664c6ccb6f183</a>
+
+		    </p>
+
+		    <img alt="bug36" src="assets/bugs/bug36.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
 
-	      <a id="b17" class="list-group-item active">attempt to use a resource after having freed it</a>
+
+
+	      <a id="deadcode" class="list-group-item active">attempt to use a resource after having freed it</a>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
+
 		    <a data-toggle="collapse" data-parent="#accordion" href="#bug37">
+
 		      Module_core is referenced after being freed during error cleanup
+
 		    </a>
+
 		  </h4>
+
 		</div>
+
 		<div id="bug37" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 37
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/6e2b757">http://vbdb.itu.dk/#bug/6e2b757</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/kernel/module.c?id=720eba31f47aeade8ec130ca7f4353223c49170f">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/kernel/module.c?id=720eba31f47aeade8ec130ca7f4353223c49170f</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/kernel/module.c?id=17da2bd90abf428523de0fb98f7075e00e3ed42e">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/kernel/module.c?id=17da2bd90abf428523de0fb98f7075e00e3ed42e</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/kernel/module.c?id=6e2b75740bed35df98b8113300579e13ed2ce848">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/kernel/module.c?id=6e2b75740bed35df98b8113300579e13ed2ce848</a>
+
+		    </p>
+
+		    <img alt="bug37" src="assets/bugs/bug37.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
 
-	      <a id="b18" class="list-group-item active">warning: dereferencing `void *' pointer</a>
+
+
+	      <a id="deadcode" class="list-group-item active">warning: dereferencing `void *' pointer</a>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
+
 		    <a data-toggle="collapse" data-parent="#accordion" href="#bug38">
+
 		      Disabling PCI support implies that a void* pointer will be dereferenced
+
 		    </a>
+
 		  </h4>
+
 		</div>
+
 		<div id="bug38" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 38
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/d530db0">http://vbdb.itu.dk/#bug/d530db0</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/3c59x.c?id=1da177e4c3f41524e886b7f1b8a0c1fc7321cac2">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/3c59x.c?id=1da177e4c3f41524e886b7f1b8a0c1fc7321cac2</a>]
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/3c59x.c?id=d530db0db90378b5674cb78d9c0cfcc83f851a5e">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/3c59x.c?id=d530db0db90378b5674cb78d9c0cfcc83f851a5e</a>
+
+		    </p>
+
+		    <img alt="bug38" src="assets/bugs/bug38.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
 
-	      <a id="b19" class="list-group-item active">assertion violation</a>
+
+
+	      <a id="deadcode" class="list-group-item active">assertion violation</a>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
+
 		    <a data-toggle="collapse" data-parent="#accordion" href="#bug39">
-		      Local_bh_enable() is called with interrupts disabled when HIGHMEM
-		    </a>
-		  </h4>
-		</div>
-		<div id="bug39" class="panel-collapse collapse">
-		  <div class="panel-body">
-		    bug 39
-		  </div>
-		</div>
-	      </div>
-	      <div class="panel panel-default">
-		<div class="panel-heading">
-		  <h4 class="panel-title">
-		    <a data-toggle="collapse" data-parent="#accordion" href="#bug40">
+
 		      Warning due to a call to kmalloc() with flags __GFP_WAIT and interrupts enabled
+
 		    </a>
+
 		  </h4>
+
 		</div>
+
+		<div id="bug39" class="panel-collapse collapse">
+
+		  <div class="panel-body">
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/eb91f1d">http://vbdb.itu.dk/#bug/eb91f1d</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/mm/slab.c?id=e498be7dafd72fd68848c1eef1575aa7c5d658df">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/mm/slab.c?id=e498be7dafd72fd68848c1eef1575aa7c5d658df</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/slab.c?id=dd3927105b6f65afb7dac17682172cdfb86d3f00">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/slab.c?id=dd3927105b6f65afb7dac17682172cdfb86d3f00</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/slab.c?id=eb91f1d0a531289e18f5587dc197d12a251c66a3">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/slab.c?id=eb91f1d0a531289e18f5587dc197d12a251c66a3</a>
+
+		    </p>
+
+		    <img alt="bug39" src="assets/bugs/bug39.png" width="1330" heigth="693"/>
+
+		  </div>
+
+		</div>
+
+	      </div>
+
+	      <div class="panel panel-default">
+
+		<div class="panel-heading">
+
+		  <h4 class="panel-title">
+
+		    <a data-toggle="collapse" data-parent="#accordion" href="#bug40">
+
+		      Local_bh_enable() is called with interrupts disabled when HIGHMEM
+
+		    </a>
+
+		  </h4>
+
+		</div>
+
 		<div id="bug40" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 40
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/208d898">http://vbdb.itu.dk/#bug/208d898</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/net/ipv4/udp.c?id=1da177e4c3f41524e886b7f1b8a0c1fc7321cac2">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/net/ipv4/udp.c?id=1da177e4c3f41524e886b7f1b8a0c1fc7321cac2</a>]
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/net/ipv4/udp.c?id=208d89843b7b03978d8e748b8b991c1be81c4f43">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/net/ipv4/udp.c?id=208d89843b7b03978d8e748b8b991c1be81c4f43</a>
+
+		    </p>
+
+		    <img alt="bug40" src="assets/bugs/bug40.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
 
-	      <a id="b20" class="list-group-item active">attempt to write on read-only resource</a>
+
+
+	      <a id="deadcode" class="list-group-item active">attempt to write on read-only resource</a>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
+
 		    <a data-toggle="collapse" data-parent="#accordion" href="#bug41">
+
 		      Attempt to set a breakpoint resulted in kernel panic
+
 		    </a>
+
 		  </h4>
+
 		</div>
+
 		<div id="bug41" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 41
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/221ac32">http://vbdb.itu.dk/#bug/221ac32</a>
+
+		       <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/include/asm-powerpc/pgtable-ppc32.h?id=f88df14b1f15cdeffa060580a40c1ce3e13bb79e">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/include/asm-powerpc/pgtable-ppc32.h?id=f88df14b1f15cdeffa060580a40c1ce3e13bb79e</a>]
+
+		       <br /> 
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/include/asm-powerpc/pgtable-ppc32.h? id=221ac329e93fe2a676346af2e98e311251648f69">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/include/asm-powerpc/pgtable-ppc32.h? id=221ac329e93fe2a676346af2e98e311251648f69</a>
+
+		    </p>
+
+		    <img alt="bug41" src="assets/bugs/bug41.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
 
-	      <a id="b21" class="list-group-item active">wrong number of arguments in function application</a>
+
+
+	      <a id="deadcode" class="list-group-item active">wrong number of arguments in function application</a>
+
 	      <div class="panel panel-default">
+
 		<div class="panel-heading">
+
 		  <h4 class="panel-title">
+
 		    <a data-toggle="collapse" data-parent="#accordion" href="#bug42">
+
 		      Null stub missing parameter when !TRACING
+
 		    </a>
+
 		  </h4>
+
 		</div>
+
 		<div id="bug42" class="panel-collapse collapse">
+
 		  <div class="panel-body">
-		    bug 42
+
+		    <p>
+
+		      <a href="http://vbdb.itu.dk/#bug/e67bc51">http://vbdb.itu.dk/#bug/e67bc51</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/include/linux/kernel.h?id=c142be8ebe0b7bf73c8a0063925623f3e4b980c0">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/diff/include/linux/kernel.h?id=c142be8ebe0b7bf73c8a0063925623f3e4b980c0</a>
+
+		      <br /> 
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/include/linux/kernel.h?id=9d3c752c062e3266f1051ba0825276ea1e2777da">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/include/linux/kernel.h?id=9d3c752c062e3266f1051ba0825276ea1e2777da</a>
+
+		      <br />
+
+		      <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/include/linux/kernel.h?id=e67bc51e574ffe3c4bc1e09cab7658b1e780b4ce">http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/include/linux/kernel.h?id=e67bc51e574ffe3c4bc1e09cab7658b1e780b4ce</a>
+
+
+
+		    </p>
+
+		    <img alt="bug42" src="assets/bugs/bug42.png" width="1330" heigth="693"/>
+
 		  </div>
+
 		</div>
+
 	      </div>
+	      <!--End MP-->
 
 	      <h2 class="text-danger"><strong>GCC</strong></h2>
 
